@@ -10,6 +10,12 @@ void AGVRobotInfo::publish_data() {
   msg.data_field_03 = "ip_address: " + ip_address;
   msg.data_field_04 = "firmware_version:" + firmware_version;
   msg.data_field_05 = "maximum_payload:" + maximum_payload;
+  msg.data_field_06 =
+      "hydraulic_oil_temperature: " + hsm.getHydraulicOilTemperature();
+  msg.data_field_07 =
+      "hydraulic_oil_tank_fill_level: " + hsm.getHydraulicOilTankFillLevel();
+  msg.data_field_08 =
+      "hydraulic_oil_pressure: " + hsm.getHydraulicOilPressure();
 
   data_publisher.publish(msg);
 }

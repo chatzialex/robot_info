@@ -12,6 +12,9 @@ int main(int argc, char **argv) {
   robot_info_params.ip_address = "169.254.5.180";
   robot_info_params.firmware_version = "3.5.8";
   robot_info_params.maximum_payload = "100 Kg";
+  robot_info_params.hydraulic_oil_temperature = "45C";
+  robot_info_params.hydraulic_oil_tank_fill_level = "100%";
+  robot_info_params.hydraulic_oil_pressure = "250 bar";
 
   AGVRobotInfo robot_info{&node_handle, robot_info_params};
   ros::Rate loop_rate(0.5);

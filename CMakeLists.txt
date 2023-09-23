@@ -30,6 +30,7 @@ add_library(robot_info_class
 
 add_library(agv_robot_info_class
    src/agv_robot_info_class.cpp
+   src/hydraulic_system_monitor.cpp
 )
 target_link_libraries(agv_robot_info_class robot_info_class)
 
